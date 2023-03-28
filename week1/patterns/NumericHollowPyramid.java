@@ -14,16 +14,17 @@ public class NumericHollowPyramid {
                 System.out.print(" ");
             }
 
-			// number left half
-			int num = i+1;
-			for (int k = 0; k < i+1; k++) {
-				System.out.print(num++);
-			}
+			// number left half (printing 1)
+			System.out.print(1);
 
-			// number right half
-			int rightNum = 2*i;
-			for (int l=0; l < i; l++) {
-				System.out.print(rightNum--);
+			// number right half (rest of the numbers)
+			for (int l = 0; l < i; l++) {
+				int num = l+2;
+				if (l == i-1 || i == n-1)
+					System.out.print(" " + num);
+				else 
+					System.out.print("  ");
+				num++;
 			}
             System.out.println();
         }
