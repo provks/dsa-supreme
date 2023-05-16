@@ -19,7 +19,7 @@ public class CountZeroOne {
         System.out.println("One count: " + oneCount);
     }
 
-    private static int[] getArrayInput() {
+    public static int[] getArrayInput() {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int[] arr = new int[size];
