@@ -2,7 +2,7 @@ package week3Array.basics;
 
 // import week3Array.basics.CountZeroOne;
 
-public class findMinimum {
+public class FindMinimum {
     public static void main(String[] args) {
         int arr[] = CountZeroOne.getArrayInput();
         int min = findMinElement(arr);

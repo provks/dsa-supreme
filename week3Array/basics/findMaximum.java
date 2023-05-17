@@ -1,8 +1,6 @@
 package week3Array.basics;
 
-import week3Array.basics.CountZeroOne;
-
-public class findMaximum {
+public class FindMaximum {
     public static void main(String[] args) {
         int arr[] = CountZeroOne.getArrayInput();
         int max = findMaxElement(arr);
