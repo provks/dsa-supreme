@@ -1,14 +1,28 @@
 package week3Array.lec2;
 
-import week3Array.basics.CountZeroOne;
+import java.util.Scanner;
+
+// import week3Array.basics.CountZeroOne;
 
 public class UnionOfTwoArrays {
+
+    public static int[] getArrayInput() {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        // sc.close();
+        return arr;
+    }
+
     // Assume no duplicates, although many variations exists, like existing duplicates and get sorted uninon array.
     public static void main(String[] args) {
         System.out.println("Provide array 1");
-        int arr1[] = CountZeroOne.getArrayInput();
+        int arr1[] = getArrayInput();
         System.out.println("Provide array 2");
-        int arr2[] = CountZeroOne.getArrayInput();
+        int arr2[] = getArrayInput();
 
         int union[] = getUnionArray(arr1, arr2);
         // print union array
