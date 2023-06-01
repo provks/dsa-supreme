@@ -13,7 +13,8 @@ public class IntersectionOfTwoArrays {
             for (int j = 0; j < arr2.length; j++) {
                 if (arr1[i] == arr2[j]) {
                     System.out.print(arr1[i] + " ");
-                    arr2[j] = Integer.MIN_VALUE;    // to handle duplicates
+                    arr1[j] = Integer.MIN_VALUE;    // to handle duplicates
+                    break;
                 }
             }
         }
