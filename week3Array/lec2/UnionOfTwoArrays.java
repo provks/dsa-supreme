@@ -24,11 +24,12 @@ public class UnionOfTwoArrays {
         System.out.println("Provide array 2");
         int arr2[] = getArrayInput();
 
-        int union[] = getUnionArray(arr1, arr2);
-        // print union array
-        for (int i = 0; i < union.length; i++) {
-            System.out.print(union[i] + " ");
-        }
+        // int union[] = getUnionArray(arr1, arr2);
+        // // print union array
+        // for (int i = 0; i < union.length; i++) {
+        //     System.out.print(union[i] + " ");
+        // }
+		findUnionArray(arr1, arr2);
         System.out.println();
 
     }
@@ -43,6 +44,29 @@ public class UnionOfTwoArrays {
             union[start++] = arr2[i];
         }
         return union;
+    }
+    // handles duplicates
+    private static void findUnionArray(int[] arr1, int[] arr2) {
+        // remove duplicates using intersection
+        findIntersection(arr1, arr2);
+
+       for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != Integer.MIN_VALUE) System.out.print(arr1[i] + " ");
+        }
+        for (int i = 0; i < arr2.length; i++) {
+             if (arr2[i] != Integer.MIN_VALUE) System.out.print(arr2[i] + " ");
+        }
+    }
+
+    private static void findIntersection(int[] arr1, int[] arr2) {
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    arr1[j] = Integer.MIN_VALUE;    // to handle duplicates
+                    break;
+                }
+            }
+        }
     }
     
 }
